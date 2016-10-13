@@ -564,61 +564,6 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkButton" id="Button_reload">
-                            <property name="visible">True</property>
-                            <property name="can_focus">True</property>
-                            <property name="receives_default">True</property>
-                            <property name="margin_left">5</property>
-                            <property name="margin_right">5</property>
-                            <property name="margin_top">10</property>
-                            <property name="margin_bottom">5</property>
-                            <property name="always_show_image">True</property>
-                            <signal name="clicked" handler="on_reload_list" swapped="no"/>
-                            <child>
-                              <object class="GtkBox" id="box11">
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                                <child>
-                                  <object class="GtkImage" id="image6">
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">False</property>
-                                    <property name="margin_left">20</property>
-                                    <property name="stock">gtk-refresh</property>
-                                  </object>
-                                  <packing>
-                                    <property name="expand">False</property>
-                                    <property name="fill">True</property>
-                                    <property name="position">0</property>
-                                  </packing>
-                                </child>
-                                <child>
-                                  <object class="GtkLabel" id="label8">
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">False</property>
-                                    <property name="margin_left">55</property>
-                                    <property name="margin_right">55</property>
-                                    <property name="label" translatable="yes">Reload List</property>
-                                    <property name="ellipsize">end</property>
-                                    <attributes>
-                                      <attribute name="weight" value="medium"/>
-                                    </attributes>
-                                  </object>
-                                  <packing>
-                                    <property name="expand">False</property>
-                                    <property name="fill">True</property>
-                                    <property name="position">1</property>
-                                  </packing>
-                                </child>
-                              </object>
-                            </child>
-                          </object>
-                          <packing>
-                            <property name="expand">True</property>
-                            <property name="fill">True</property>
-                            <property name="position">1</property>
-                          </packing>
-                        </child>
-                        <child>
                           <object class="GtkButton" id="Button_Delete">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>

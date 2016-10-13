@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-12 23:30+0200\n"
+"POT-Creation-Date: 2016-10-13 21:10+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -74,37 +74,61 @@ msgid "Rating (1-5)"
 msgstr ""
 
 #: uiP1.glade.h:15
-msgid "Cancel"
+msgid "Pending"
 msgstr ""
 
 #: uiP1.glade.h:16
-msgid "Confirm"
+msgid "Watched"
 msgstr ""
 
 #: uiP1.glade.h:17
-msgid "Edit selected"
+msgid "Status?"
 msgstr ""
 
 #: uiP1.glade.h:18
-msgid "Reload List"
+msgid "Cancel"
 msgstr ""
 
 #: uiP1.glade.h:19
-msgid "Delete selected"
+msgid "Confirm"
 msgstr ""
 
 #: uiP1.glade.h:20
-msgid "Id"
+msgid "Edit selected"
 msgstr ""
 
 #: uiP1.glade.h:21
-msgid "Release"
+msgid "Reload List"
 msgstr ""
 
 #: uiP1.glade.h:22
-msgid "Runtime"
+msgid "Delete selected"
 msgstr ""
 
 #: uiP1.glade.h:23
+msgid "Full film list"
+msgstr ""
+
+#: uiP1.glade.h:24
+msgid "Watched films"
+msgstr ""
+
+#: uiP1.glade.h:25
+msgid "Pending Films"
+msgstr ""
+
+#: uiP1.glade.h:26
+msgid "Id"
+msgstr ""
+
+#: uiP1.glade.h:27
+msgid "Release"
+msgstr ""
+
+#: uiP1.glade.h:28
+msgid "Runtime"
+msgstr ""
+
+#: uiP1.glade.h:29
 msgid "Rating"
 msgstr ""
