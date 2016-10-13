@@ -1,0 +1,112 @@
+# Spanish translations for Tercero package
+# Traducciones al español para el paquete Tercero.
+# Copyright (C) 2016 THE Tercero'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Tercero package.
+# Vanessa <vanessa@vanessa-satellite-c50-a-1jm>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Tercero  1c\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-10-12 23:30+0200\n"
+"PO-Revision-Date: 2016-10-12 23:33+0200\n"
+"Last-Translator: Vanessa <vanessa@vanessa-satellite-c50-a-1jm>\n"
+"Language-Team: Spanish\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#: uiP1.glade.h:1
+msgid "Movies DB"
+msgstr "Películas BD"
+
+#: uiP1.glade.h:2
+msgid "Movies DataBase"
+msgstr "Películas BD"
+
+#: uiP1.glade.h:3
+msgid "Insert title keyword..."
+msgstr "Introducir palabra clave..."
+
+#: uiP1.glade.h:4
+msgid "Search"
+msgstr "Buscar"
+
+#: uiP1.glade.h:5
+msgid "Insert movie title..."
+msgstr "Insertar título ..."
+
+#: uiP1.glade.h:6
+msgid "Insert movie release year..."
+msgstr "Insertar año de estreno..."
+
+#: uiP1.glade.h:7
+msgid "Insert movie runtime..."
+msgstr "Insertar duración..."
+
+#: uiP1.glade.h:8
+msgid "Insert movie synopsis..."
+msgstr "Insertar descripción..."
+
+#: uiP1.glade.h:9
+msgid "Insert movie rating..."
+msgstr "Insertar calificación..."
+
+#: uiP1.glade.h:10
+msgid "Title"
+msgstr "Titulo"
+
+#: uiP1.glade.h:11
+msgid "Release year"
+msgstr "Año de estreno"
+
+#: uiP1.glade.h:12
+msgid "Runtime (min)"
+msgstr "Duración (min)"
+
+#: uiP1.glade.h:13
+msgid "Synopsis"
+msgstr "Descripción"
+
+#: uiP1.glade.h:14
+msgid "Rating (1-5)"
+msgstr "Calificación (1-5)"
+
+#: uiP1.glade.h:15
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: uiP1.glade.h:16
+msgid "Confirm"
+msgstr "Confirmar"
+
+#: uiP1.glade.h:17
+msgid "Edit selected"
+msgstr "Editar seleccionada"
+
+#: uiP1.glade.h:18
+msgid "Reload List"
+msgstr "Recargar lista"
+
+#: uiP1.glade.h:19
+msgid "Delete selected"
+msgstr "Borrar seleccionada"
+
+#: uiP1.glade.h:20
+msgid "Id"
+msgstr "Id"
+
+#: uiP1.glade.h:21
+msgid "Release"
+msgstr "Estreno"
+
+#: uiP1.glade.h:22
+msgid "Runtime"
+msgstr "Duración\t"
+
+#: uiP1.glade.h:23
+msgid "Rating"
+msgstr "Calificación"
