@@ -23,16 +23,16 @@ class Handler(object):
 		
 	def on_button_confirm_movie(self, b):
 		self.lista = self.vista.confirm_movie(self, b)
-		if self.lista[5] != None:
-			self.modelo.edit_movie(self.lista[5], self.lista[0],  \
+		if self.lista[6] != None:
+			self.modelo.edit_movie(self.lista[6], self.lista[0],  \
 								   self.lista[1], self.lista[2],  \
-								   self.lista[3], self.lista[4])  
+								   self.lista[3], self.lista[4], self.lista[5])  
 		else:
 			self.modelo.insert_movie(self.lista[0], self.lista[1],  \
 								     self.lista[2], self.lista[3],  \
-								     self.lista[4])  
+								     self.lista[4], self.lista[5])  
 		self.lista = self.modelo.get_list_movies()
-		self.vista.show_list(self.lista)			
+		self.vista.show_list_restoreCombo(self.lista)			
 
 
 	def on_Button_Edit(self, b):
@@ -57,3 +57,12 @@ class Handler(object):
 	def on_reload_list(self, b):
 		self.lista = self.modelo.get_list_movies()
 		self.vista.show_list(self.lista)
+
+	def on_comboboxtext_changed(self,b):
+		combo_id = self.vista.check_combobox(b)
+		if combo_id == 0:
+			self.lista = self.modelo.get_list_movies()
+			self.vista.show_list(self.lista)
+		else:	
+			self.lista = self.modelo.search_by(combo_id)
+			self.vista.show_list(self.lista)

@@ -30,10 +30,11 @@ class Model(object):
 			conn.execute('''CREATE TABLE MoviesDB
 			  (Id   INTEGER    PRIMARY KEY, 
 		       Title 		   TEXT           NOT NULL,
-		       Release         INT            NOT NULL,
+		       Release         INT,
 		       Runtime		   INT,
 		       Synopsis        TEXT,
-		       Rating          INT);''')
+		       Rating          INT,
+		       Watched		   INT);''')
 			conn.commit()
 			conn.close()
 			print ("Table created successfully");
@@ -48,23 +49,23 @@ class Model(object):
 		conn.commit()
 		conn.close()		
 
-	def insert_movie(self, tit, rel, run, syn, rat):
+	def insert_movie(self, tit, rel, run, syn, rat, wat):
 		# Insertamos la película en la base de datos
 		sqlite_file = self.DB_DIR
 		conn = sqlite3.connect(sqlite_file)
 		c = conn.cursor()
-		conn.execute("INSERT INTO MoviesDB (Id, Title,Release,Runtime,Synopsis,Rating) VALUES (?,?,?,?,?, ?)",\
-					(None, tit, rel, run, syn, rat));
+		conn.execute("INSERT INTO MoviesDB (Id, Title,Release,Runtime,Synopsis,Rating, Watched) VALUES (?,?,?,?,?,?,?)",\
+					(None, tit, rel, run, syn, rat, wat));
 		conn.commit()
 		conn.close()	
 
-	def edit_movie(self, id_num, title,release,runtime,synopsis,rating):
+	def edit_movie(self, id_num, title,release,runtime,synopsis,rating, watched):
 		# Editamos la película en la base de datos
 		sqlite_file = self.DB_DIR
 		conn = sqlite3.connect(sqlite_file)
 		c = conn.cursor()
-		conn.execute("UPDATE MoviesDB SET Title = ?, Release = ?, Runtime = ?, Synopsis = ?, Rating = ?  WHERE Id = ?",\
-		    		(title, release, runtime, synopsis, rating, id_num));
+		conn.execute("UPDATE MoviesDB SET Title = ?, Release = ?, Runtime = ?, Synopsis = ?, Rating = ?, Watched = ?  WHERE Id = ?",\
+		    		(title, release, runtime, synopsis, rating, watched, id_num));
 		conn.commit()
 		conn.close()	 	
 
@@ -72,7 +73,7 @@ class Model(object):
 		lista = []
 		sqlite_file = self.DB_DIR
 		conn = sqlite3.connect(sqlite_file)
-		cursor = conn.execute("SELECT Id, Title,Release,Runtime,Synopsis,Rating FROM MoviesDB") 
+		cursor = conn.execute("SELECT Id, Title,Release,Runtime,Synopsis,Rating, Watched FROM MoviesDB") 
 		lista.clear()
 		for columna in cursor:
 			lista.append(columna)
@@ -100,3 +101,23 @@ class Model(object):
 				lista.append(columna)
 		conn.close()
 		return lista			
+
+	def search_by(self, combo_id):
+		combo_list = []
+		sqlite_file = self.DB_DIR
+		conn = sqlite3.connect(sqlite_file)
+		cursor = conn.execute("SELECT Id, Title,Release,Runtime,Synopsis,Rating, Watched FROM MoviesDB") 		
+		if combo_id == 1:
+			for columna in cursor:
+				if columna[6] == 1:
+					combo_list.append(columna)
+			conn.close()
+			return combo_list
+		elif combo_id == 2:
+			for columna in cursor:
+				if columna[6] == 0:
+					combo_list.append(columna)
+			conn.close()
+			return combo_list
+		else:
+			print("Error en search by!")	
