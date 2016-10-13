@@ -49,7 +49,6 @@ class View(object):
 
 		except:
 			lista.append(None)
-			lista.append(None)
 			# Limpiamos las entradas de los datos anteriores
 			title_entry.set_text("")
 			runtime_entry.set_text("")
@@ -132,6 +131,3 @@ class View(object):
 		combo_info = self.builder.get_object("comboboxtext")
 		return combo_info.get_active()
 
-
-
-# comboboxtext_film_info
