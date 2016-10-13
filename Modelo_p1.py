@@ -120,4 +120,4 @@ class Model(object):
 			conn.close()
 			return combo_list
 		else:
-			print("Error en search by!")	
+			return None
