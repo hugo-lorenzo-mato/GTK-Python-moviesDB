@@ -95,7 +95,7 @@ class Model(object):
 		lista = []
 		sqlite_file = self.DB_DIR
 		conn = sqlite3.connect(sqlite_file)
-		cursor = conn.execute("SELECT Id, Title,Release,Runtime,Synopsis,Rating FROM MoviesDB") 
+		cursor = conn.execute("SELECT Id, Title,Release,Runtime,Synopsis,Rating, Watched FROM MoviesDB") 
 		for columna in cursor:
 			if key in columna[1].lower() or key in columna[4].lower():
 				lista.append(columna)

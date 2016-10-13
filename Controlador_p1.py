@@ -8,6 +8,7 @@ from gi.repository import Gtk
 import Modelo_p1
 import Vista_p1
 
+
 class Handler(object):
 
 	def __init__(self):
@@ -66,3 +67,5 @@ class Handler(object):
 		else:	
 			self.lista = self.modelo.search_by(combo_id)
 			self.vista.show_list(self.lista)
+
+

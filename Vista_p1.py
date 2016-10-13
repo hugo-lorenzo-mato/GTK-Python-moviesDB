@@ -130,4 +130,3 @@ class View(object):
 	def check_combobox(self, b):
 		combo_info = self.builder.get_object("comboboxtext")
 		return combo_info.get_active()
-
