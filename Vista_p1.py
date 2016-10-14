@@ -135,4 +135,12 @@ class View(object):
 		select = self.tree_view.get_selection()
 		model, treeiter = select.get_selected()
 		title = self.liststore[treeiter][1]
-		return title	
+		return title
+		
+	def show_recom_dialog(self):
+		w_r = self.builder.get_object("recom_dialog")
+		w_r.show()
+
+	def hide_recom_dialog(self):
+		w_r = self.builder.get_object("recom_dialog")
+		w_r.hide()

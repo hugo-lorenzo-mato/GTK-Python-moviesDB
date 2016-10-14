@@ -173,5 +173,3 @@ class Model(object):
 					break
 			#lista.append([None,title, release, runtime, synopsis, \
 			#rating, None])
-						
-		return lista	

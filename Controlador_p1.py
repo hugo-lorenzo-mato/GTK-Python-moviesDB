@@ -7,7 +7,7 @@ from gi.repository import Gtk
 
 import Modelo_p1
 import Vista_p1
-
+import threading
 
 class Handler(object):
 
@@ -68,9 +68,21 @@ class Handler(object):
 			self.lista = self.modelo.search_by(combo_id)
 			self.vista.show_list(self.lista)
 
+	
 	def on_button_recommended(self, b):
 		# Se obtiene el título de la película de la vista
 		title = self.vista.recommended_clicked(b)
-		self.modelo.recommended(title)
+
+		threading.Thread(None, target = self.recommended_thread, args = [title]).start()
 		self.lista = self.modelo.get_list_movies()
 		self.vista.show_list_restoreCombo(self.lista)
+		
+	def showupdate(self):
+		lista = self.modelo.get_list_movies()
+		self.vista.show_list_restoreCombo(lista)
+		
+	def recommended_thread(self, title):
+		self.vista.show_recom_dialog()
+		self.modelo.recommended(title)
+		self.vista.hide_recom_dialog()
+		self.showupdate()
