@@ -70,8 +70,7 @@ class Handler(object):
 
 	def on_button_recommended(self, b):
 		# Se obtiene el título de la película de la vista
-		#self.vista.show_recom_dialog()
 		title = self.vista.recommended_clicked(b)
-		self.lista = self.modelo.recommended(title)
-		#self.vista.hide_recom_dialog()
-		self.vista.show_list(self.lista)
+		self.modelo.recommended(title)
+		self.lista = self.modelo.get_list_movies()
+		self.vista.show_list_restoreCombo(self.lista)

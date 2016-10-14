@@ -125,6 +125,17 @@ class Model(object):
 		else:
 			return None
 			
+	def check_exists_title(self, title):
+		sqlite_file = self.DB_DIR
+		conn = sqlite3.connect(sqlite_file)
+		cursor = conn.execute("SELECT Title FROM MoviesDB WHERE Title = ?", (title, )) 
+		data=cursor.fetchone()
+		if data is None:
+			return False
+		else:
+			return True
+		conn.close()
+			
 			
 	def recommended(self, title):
 		lista = []
@@ -132,6 +143,8 @@ class Model(object):
 		#ids de tmdb propias)
 		search = tmdb.Search()
 		response = search.movie(query= title)
+		if search.results == []:
+			return lista
 		s = search.results[0]
 		num = int(s['id'])
 		mov = tmdb.Movies(num)
@@ -152,9 +165,13 @@ class Model(object):
 			synopsis = mov.overview
 			rating = int((mov.vote_average)/2)
 			# ID(DB), título, año, duración, sinopsis, puntuación, vista
-			lista.append([None,title, release, runtime, synopsis, \
-			rating, None])
+			if not self.check_exists_title(title):
+				self.insert_movie(title, release, runtime, synopsis, \
+				rating, None)
+			#lista.append([None,title, release, runtime, synopsis, \
+			#rating, None])
 			i = i+1
 			if i == 5:
-				break				
+				break
+						
 		return lista	
