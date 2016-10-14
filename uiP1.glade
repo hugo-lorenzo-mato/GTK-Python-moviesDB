@@ -543,7 +543,6 @@
                                     <property name="margin_left">55</property>
                                     <property name="margin_right">55</property>
                                     <property name="label" translatable="yes">Edit selected</property>
-                                    <property name="ellipsize">end</property>
                                     <attributes>
                                       <attribute name="weight" value="medium"/>
                                     </attributes>
@@ -591,6 +590,8 @@
                                   <object class="GtkLabel" id="label8">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
+                                    <property name="margin_left">50</property>
+                                    <property name="margin_right">50</property>
                                     <property name="label" translatable="yes">Recommended</property>
                                     <attributes>
                                       <attribute name="weight" value="medium"/>
@@ -606,7 +607,7 @@
                             </child>
                           </object>
                           <packing>
-                            <property name="expand">False</property>
+                            <property name="expand">True</property>
                             <property name="fill">True</property>
                             <property name="position">1</property>
                           </packing>
@@ -645,7 +646,6 @@
                                     <property name="margin_left">50</property>
                                     <property name="margin_right">50</property>
                                     <property name="label" translatable="yes">Delete selected</property>
-                                    <property name="ellipsize">end</property>
                                     <attributes>
                                       <attribute name="weight" value="medium"/>
                                     </attributes>
@@ -789,6 +789,7 @@
                             <child>
                               <object class="GtkTreeViewColumn" id="treeviewcolumn5">
                                 <property name="resizable">True</property>
+                                <property name="fixed_width">120</property>
                                 <property name="title" translatable="yes">Synopsis</property>
                                 <property name="expand">True</property>
                                 <property name="clickable">True</property>
@@ -809,6 +810,8 @@
                                 <property name="title" translatable="yes">Rating</property>
                                 <property name="expand">True</property>
                                 <property name="clickable">True</property>
+                                <property name="reorderable">True</property>
+                                <property name="sort_indicator">True</property>
                                 <property name="sort_column_id">5</property>
                                 <child>
                                   <object class="GtkCellRendererText" id="cellrenderertext12"/>
