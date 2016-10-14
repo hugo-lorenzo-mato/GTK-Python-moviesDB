@@ -36,7 +36,7 @@ class Handler(object):
 		self.vista.show_list_restoreCombo(self.lista)			
 
 
-	def on_Button_Edit(self, b):
+	def on_Button_Edit(self, b, b2, w):
 		self.vista.edit_film(self, b)
 
 

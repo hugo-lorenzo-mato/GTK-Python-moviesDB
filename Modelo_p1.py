@@ -167,11 +167,11 @@ class Model(object):
 			# ID(DB), título, año, duración, sinopsis, puntuación, vista
 			if not self.check_exists_title(title):
 				self.insert_movie(title, release, runtime, synopsis, \
-				rating, None)
+				rating, 0)
+				i = i+1
+				if i == 5:
+					break
 			#lista.append([None,title, release, runtime, synopsis, \
 			#rating, None])
-			i = i+1
-			if i == 5:
-				break
 						
 		return lista	
