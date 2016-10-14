@@ -129,7 +129,7 @@ class Model(object):
 	def recommended(self, title):
 		lista = []
 		#Primero se busca la película por título (ya que no contamos con
-		#ids de tmdb propias
+		#ids de tmdb propias)
 		search = tmdb.Search()
 		response = search.movie(query= title)
 		s = search.results[0]
