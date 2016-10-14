@@ -144,3 +144,8 @@ class View(object):
 	def hide_recom_dialog(self):
 		w_r = self.builder.get_object("recom_dialog")
 		w_r.hide()
+
+	def toggle(self, b):
+		select = self.tree_view.get_selection()
+		model, treeiter = select.get_selected()
+		return self.liststore[treeiter][0]

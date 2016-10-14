@@ -171,5 +171,3 @@ class Model(object):
 				i = i+1
 				if i == 5:
 					break
-			#lista.append([None,title, release, runtime, synopsis, \
-			#rating, None])

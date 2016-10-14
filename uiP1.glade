@@ -100,64 +100,12 @@
                             <property name="primary_icon_activatable">False</property>
                             <property name="primary_icon_sensitive">False</property>
                             <property name="placeholder_text" translatable="yes">Insert title keyword...</property>
+                            <signal name="activate" handler="on_button_search_clicked" swapped="no"/>
                           </object>
                           <packing>
                             <property name="expand">False</property>
                             <property name="fill">True</property>
                             <property name="position">0</property>
-                          </packing>
-                        </child>
-                        <child>
-                          <object class="GtkButton" id="button_search">
-                            <property name="visible">True</property>
-                            <property name="can_focus">True</property>
-                            <property name="receives_default">True</property>
-                            <property name="valign">center</property>
-                            <property name="hexpand">True</property>
-                            <property name="always_show_image">True</property>
-                            <signal name="clicked" handler="on_button_search_clicked" swapped="no"/>
-                            <child>
-                              <object class="GtkBox" id="box10">
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                                <child>
-                                  <object class="GtkImage" id="image5">
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">False</property>
-                                    <property name="margin_left">3</property>
-                                    <property name="stock">gtk-find</property>
-                                  </object>
-                                  <packing>
-                                    <property name="expand">False</property>
-                                    <property name="fill">False</property>
-                                    <property name="position">0</property>
-                                  </packing>
-                                </child>
-                                <child>
-                                  <object class="GtkLabel" id="label7">
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">False</property>
-                                    <property name="margin_left">10</property>
-                                    <property name="margin_right">5</property>
-                                    <property name="hexpand">False</property>
-                                    <property name="label" translatable="yes">Search</property>
-                                    <attributes>
-                                      <attribute name="weight" value="medium"/>
-                                    </attributes>
-                                  </object>
-                                  <packing>
-                                    <property name="expand">True</property>
-                                    <property name="fill">True</property>
-                                    <property name="position">1</property>
-                                  </packing>
-                                </child>
-                              </object>
-                            </child>
-                          </object>
-                          <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">1</property>
                           </packing>
                         </child>
                       </object>
@@ -680,7 +628,6 @@
                                 <property name="reorderable">True</property>
                                 <property name="sort_indicator">True</property>
                                 <property name="sort_column_id">0</property>
-                                <signal name="clicked" handler="on_Button_Edit" swapped="no"/>
                                 <child>
                                   <object class="GtkCellRendererText" id="cellrenderertext7"/>
                                   <attributes>
@@ -784,7 +731,9 @@
                                 <property name="sort_indicator">True</property>
                                 <property name="sort_column_id">6</property>
                                 <child>
-                                  <object class="GtkCellRendererToggle" id="cellrenderertext13"/>
+                                  <object class="GtkCellRendererToggle" id="cellrenderertext13">
+                                    <signal name="toggled" handler="on_toggle_button" swapped="no"/>
+                                  </object>
                                   <attributes>
                                     <attribute name="active">6</attribute>
                                   </attributes>
