@@ -24,6 +24,9 @@ class Handler(object):
 		
 	def on_button_confirm_movie(self, b):
 		self.lista = self.vista.confirm_movie(self, b)
+		if self.lista == []:
+			return
+		
 		if self.lista[6] != None:
 			self.modelo.edit_movie(self.lista[6], self.lista[0],  \
 								   self.lista[1], self.lista[2],  \
@@ -53,10 +56,6 @@ class Handler(object):
 	def on_button_search_clicked(self, b):
 		key = self.vista.search_clicked(self, b)
 		self.lista = self.modelo.search(key)
-		self.vista.show_list(self.lista)
-
-	def on_reload_list(self, b):
-		self.lista = self.modelo.get_list_movies()
 		self.vista.show_list(self.lista)
 
 	def on_comboboxtext_changed(self,b):

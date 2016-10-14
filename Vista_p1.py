@@ -27,12 +27,18 @@ class View(object):
 		rating_entry = self.builder.get_object("entry_rating")
 		combo_entry = self.builder.get_object("comboboxtext_film_info")
 		# Recuperamos el valor
-		lista.append(title_entry.get_text())
-		lista.append(int(release_entry.get_text()))
-		lista.append(int(runtime_entry.get_text()))
-		lista.append(synopsis_entry.get_text())
-		lista.append(int(rating_entry.get_text()))
-		lista.append(combo_entry.get_active())
+		try:
+			lista.append(title_entry.get_text())
+			lista.append(int(release_entry.get_text()))
+			lista.append(int(runtime_entry.get_text()))
+			lista.append(synopsis_entry.get_text())
+			lista.append(int(rating_entry.get_text()))
+			lista.append(combo_entry.get_active())
+		except:
+			w = self.builder.get_object("err_dialog")
+			w.run()
+			w.hide()
+			return []
 		# Nos servimos de tree iterator para recuperar los datos de la fila seleccionada
 		select = self.tree_view.get_selection()
 		model, treeiter = select.get_selected()

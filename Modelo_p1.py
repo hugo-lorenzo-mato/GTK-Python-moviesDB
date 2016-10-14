@@ -139,8 +139,8 @@ class Model(object):
 			
 	def recommended(self, title):
 		lista = []
-		#Primero se busca la película por título (ya que no contamos con
-		#ids de tmdb propias)
+		# Primero se busca la película por título (ya que no contamos con
+		# ids de tmdb propias)
 		search = tmdb.Search()
 		response = search.movie(query= title)
 		if search.results == []:
@@ -148,23 +148,23 @@ class Model(object):
 		s = search.results[0]
 		num = int(s['id'])
 		mov = tmdb.Movies(num)
-		#Se obtiene un diccionario de las películas similares
+		# Se obtiene un diccionario de las películas similares
 		response = mov.similar_movies()
 		results = response['results']
 		i = 0
-		#Bucle limitado a 5 vueltas o menos para evitar rellenar demasiado
+		# Bucle limitado a 5 vueltas o menos para reducir volumen
 		for s in results:
 			num = int(s['id'])
 			mov = tmdb.Movies(num)
 			mov.info()
-			#Se obtiene información de los campos pertinentes
+			# Se obtiene información de los campos pertinentes
 			title = mov.title
 			release = mov.release_date
-			release = int(release[0:4]) 	#Sólo necesitamos el año
+			release = int(release[0:4]) 	# Sólo necesitamos el año
 			runtime = int(mov.runtime)
 			synopsis = mov.overview
 			rating = int((mov.vote_average)/2)
-			# ID(DB), título, año, duración, sinopsis, puntuación, vista
+			# Se comprueba que no se inserten películas ya existentes
 			if not self.check_exists_title(title):
 				self.insert_movie(title, release, runtime, synopsis, \
 				rating, 0)
