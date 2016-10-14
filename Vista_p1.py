@@ -130,3 +130,9 @@ class View(object):
 	def check_combobox(self, b):
 		combo_info = self.builder.get_object("comboboxtext")
 		return combo_info.get_active()
+		
+	def recommended_clicked(self, b):
+		select = self.tree_view.get_selection()
+		model, treeiter = select.get_selected()
+		title = self.liststore[treeiter][1]
+		return title	

@@ -8,6 +8,9 @@ from gi.repository import Gtk
 import sqlite3
 from os.path import abspath, dirname, join, exists
 
+import tmdbsimple as tmdb
+tmdb.API_KEY = '1c10532950c7f32f612ee2a3c403a56a'
+import requests
 
 
 class Model(object):
@@ -121,3 +124,37 @@ class Model(object):
 			return combo_list
 		else:
 			return None
+			
+			
+	def recommended(self, title):
+		lista = []
+		#Primero se busca la película por título (ya que no contamos con
+		#ids de tmdb propias
+		search = tmdb.Search()
+		response = search.movie(query= title)
+		s = search.results[0]
+		num = int(s['id'])
+		mov = tmdb.Movies(num)
+		#Se obtiene un diccionario de las películas similares
+		response = mov.similar_movies()
+		results = response['results']
+		i = 0
+		#Bucle limitado a 5 vueltas o menos para evitar rellenar demasiado
+		for s in results:
+			num = int(s['id'])
+			mov = tmdb.Movies(num)
+			mov.info()
+			#Se obtiene información de los campos pertinentes
+			title = mov.title
+			release = mov.release_date
+			release = int(release[0:4]) 	#Sólo necesitamos el año
+			runtime = int(mov.runtime)
+			synopsis = mov.overview
+			rating = int((mov.vote_average)/2)
+			# ID(DB), título, año, duración, sinopsis, puntuación, vista
+			lista.append([None,title, release, runtime, synopsis, \
+			rating, None])
+			i = i+1
+			if i == 5:
+				break				
+		return lista	

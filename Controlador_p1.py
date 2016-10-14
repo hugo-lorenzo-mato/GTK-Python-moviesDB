@@ -68,4 +68,10 @@ class Handler(object):
 			self.lista = self.modelo.search_by(combo_id)
 			self.vista.show_list(self.lista)
 
-
+	def on_button_recommended(self, b):
+		# Se obtiene el título de la película de la vista
+		#self.vista.show_recom_dialog()
+		title = self.vista.recommended_clicked(b)
+		self.lista = self.modelo.recommended(title)
+		#self.vista.hide_recom_dialog()
+		self.vista.show_list(self.lista)
