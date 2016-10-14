@@ -86,6 +86,4 @@ class Handler(object):
 		self.vista.hide_recom_dialog()
 		self.showupdate()
 
-	def on_toggle_button(self, b, b2):
-		id_num = self.vista.toggle(b)
-		print(id_num) 
+

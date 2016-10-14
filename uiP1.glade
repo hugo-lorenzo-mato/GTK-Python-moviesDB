@@ -731,9 +731,7 @@
                                 <property name="sort_indicator">True</property>
                                 <property name="sort_column_id">6</property>
                                 <child>
-                                  <object class="GtkCellRendererToggle" id="cellrenderertext13">
-                                    <signal name="toggled" handler="on_toggle_button" swapped="no"/>
-                                  </object>
+                                  <object class="GtkCellRendererToggle" id="cellrenderertext13"/>
                                   <attributes>
                                     <attribute name="active">6</attribute>
                                   </attributes>
