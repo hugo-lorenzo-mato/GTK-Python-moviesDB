@@ -3,7 +3,7 @@
 
 import gi
 gi.require_version("Gtk", "3.0")
-from gi.repository import Gtk
+from gi.repository import Gtk, GObject
 
 import Modelo_p1
 import Vista_p1
@@ -81,9 +81,9 @@ class Handler(object):
 		self.vista.show_list_restoreCombo(lista)
 		
 	def recommended_thread(self, title):
-		self.vista.show_recom_dialog()
+		GObject.idle_add(self.vista.show_recom_dialog)
 		self.modelo.recommended(title)
-		self.vista.hide_recom_dialog()
+		GObject.idle_add(self.vista.hide_recom_dialog)
 		self.showupdate()
 
 
