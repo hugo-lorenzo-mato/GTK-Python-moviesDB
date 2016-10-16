@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-14 11:41+0200\n"
+"POT-Creation-Date: 2016-10-16 12:43+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,105 +30,113 @@ msgid "Insert title keyword..."
 msgstr ""
 
 #: uiP1.glade.h:4
-msgid "Search"
-msgstr ""
-
-#: uiP1.glade.h:5
 msgid "Insert movie title..."
 msgstr ""
 
-#: uiP1.glade.h:6
+#: uiP1.glade.h:5
 msgid "Insert movie release year..."
 msgstr ""
 
-#: uiP1.glade.h:7
+#: uiP1.glade.h:6
 msgid "Insert movie runtime..."
 msgstr ""
 
-#: uiP1.glade.h:8
+#: uiP1.glade.h:7
 msgid "Insert movie synopsis..."
 msgstr ""
 
-#: uiP1.glade.h:9
+#: uiP1.glade.h:8
 msgid "Insert movie rating..."
 msgstr ""
 
-#: uiP1.glade.h:10
+#: uiP1.glade.h:9
 msgid "Title"
 msgstr ""
 
-#: uiP1.glade.h:11
+#: uiP1.glade.h:10
 msgid "Release year"
 msgstr ""
 
-#: uiP1.glade.h:12
+#: uiP1.glade.h:11
 msgid "Runtime (min)"
 msgstr ""
 
-#: uiP1.glade.h:13
+#: uiP1.glade.h:12
 msgid "Synopsis"
 msgstr ""
 
-#: uiP1.glade.h:14
+#: uiP1.glade.h:13
 msgid "Rating (1-5)"
 msgstr ""
 
-#: uiP1.glade.h:15
+#: uiP1.glade.h:14
 msgid "Pending"
 msgstr ""
 
-#: uiP1.glade.h:16
+#: uiP1.glade.h:15
 msgid "Watched"
 msgstr ""
 
-#: uiP1.glade.h:17
+#: uiP1.glade.h:16
 msgid "Status?"
 msgstr ""
 
-#: uiP1.glade.h:18
+#: uiP1.glade.h:17
 msgid "Cancel"
 msgstr ""
 
-#: uiP1.glade.h:19
+#: uiP1.glade.h:18
 msgid "Confirm"
 msgstr ""
 
-#: uiP1.glade.h:20
-msgid "Edit selected"
-msgstr ""
-
-#: uiP1.glade.h:21
+#: uiP1.glade.h:19
 msgid "Recommended"
 msgstr ""
 
-#: uiP1.glade.h:22
+#: uiP1.glade.h:20
 msgid "Delete selected"
 msgstr ""
 
-#: uiP1.glade.h:23
+#: uiP1.glade.h:21
 msgid "Full film list"
 msgstr ""
 
-#: uiP1.glade.h:24
+#: uiP1.glade.h:22
 msgid "Watched films"
 msgstr ""
 
-#: uiP1.glade.h:25
+#: uiP1.glade.h:23
 msgid "Pending Films"
 msgstr ""
 
-#: uiP1.glade.h:26
+#: uiP1.glade.h:24
 msgid "Id"
 msgstr ""
 
-#: uiP1.glade.h:27
+#: uiP1.glade.h:25
 msgid "Release"
 msgstr ""
 
-#: uiP1.glade.h:28
+#: uiP1.glade.h:26
 msgid "Runtime"
 msgstr ""
 
-#: uiP1.glade.h:29
+#: uiP1.glade.h:27
 msgid "Rating"
+msgstr ""
+
+#: uiP1.glade.h:28
+msgid "Error"
+msgstr ""
+
+#: uiP1.glade.h:29
+msgid "Please use correct format for insertion"
+msgstr ""
+
+#: uiP1.glade.h:30
+msgid "Downloading"
+msgstr ""
+
+#: uiP1.glade.h:31
+msgid "Checking the web for recommended movies"
 msgstr ""
